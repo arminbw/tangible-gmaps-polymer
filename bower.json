@@ -1,0 +1,19 @@
+{
+  "name": "polymer-playground",
+  "version": "0.1",
+  "authors": [
+    "Armin Wagner <noreply@arminbwagner.com>"
+  ],
+  "description": "testing polymer",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.2.1"
+  }
+}
