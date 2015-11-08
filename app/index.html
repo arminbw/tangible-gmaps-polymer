@@ -12,7 +12,26 @@
 </head>
 
 <body>
-  <google-map latitude="48.206482" longitude="16.399584"></google-map>
+  <google-map disable-default-ui no-Auto-Tilt map-Type="roadmap" latitude="48.206482" longitude="16.399584" zoom="17">
+  </google-map>
 </body>
+
+<script>
+  var stylez = [
+    { featureType: "all", elementType: "labels", stylers: [ { visibility: "off" } ] },
+		{ featureType: "road", elementType: "geometry", stylers: [ { hue: "#ff0000" }, { lightness: 100 } ] },
+		{ featureType: "poi", elementType: "all", stylers: [ { visibility: "off" } ] }, 
+		{ featureType: "road", elementType: "all", stylers: [ { visibility: "simplified" } ] },
+		{ featureType: "road", elementType: "labels", stylers: [ { visibility: "off" } ] },
+		{ featureType: "landscape", elementType: "all", stylers: [ { visibility: "on" }, { invert_lightness: true } ] },
+		{ featureType: "landscape", elementType: "labels", stylers: [ { visibility: "off" } ] },
+		{ featureType: "landscape", elementType: "geometry", stylers: [ { lightness: -100 } ] },
+		{ featureType: "landscape.man_made", elementType: "all", stylers: [{ visibility: "off"} ] },
+		{ featureType: "water", elementType: "labels", stylers: [ { visibility: "off" } ] }
+	];
+  var map = document.querySelector('google-map');
+  map.styles = stylez;
+
+</script>
 
 </html>
