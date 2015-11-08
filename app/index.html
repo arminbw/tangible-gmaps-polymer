@@ -3,7 +3,6 @@
 
 <head>
   <title>Tangible Google Maps</title>
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta charset="UTF-8">
 
   <link rel="stylesheet" href="css/main.css">
@@ -17,7 +16,8 @@
 </body>
 
 <script>
-  var stylez = [
+  var map = document.querySelector('google-map');
+  map.styles = [
     { featureType: "all", elementType: "labels", stylers: [ { visibility: "off" } ] },
 		{ featureType: "road", elementType: "geometry", stylers: [ { hue: "#ff0000" }, { lightness: 100 } ] },
 		{ featureType: "poi", elementType: "all", stylers: [ { visibility: "off" } ] }, 
@@ -29,8 +29,6 @@
 		{ featureType: "landscape.man_made", elementType: "all", stylers: [{ visibility: "off"} ] },
 		{ featureType: "water", elementType: "labels", stylers: [ { visibility: "off" } ] }
 	];
-  var map = document.querySelector('google-map');
-  map.styles = stylez;
 </script>
 
 </html>
