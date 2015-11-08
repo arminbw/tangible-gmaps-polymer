@@ -1,10 +1,10 @@
 {
-  "name": "Tangible Google Maps",
+  "name": "Tangible Gmaps Polymer",
   "version": "0.1",
   "authors": [
     "Armin Wagner <noreply@arminbwagner.com>"
   ],
-  "description": "testing polymer",
+  "description": "",
   "license": "MIT",
   "ignore": [
     "**/.*",
