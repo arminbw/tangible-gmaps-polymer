@@ -1,5 +1,5 @@
 {
-  "name": "polymer-playground",
+  "name": "Tangible Google Maps",
   "version": "0.0.1",
   "description": "",
   "main": "gruntfile.js",
@@ -13,5 +13,5 @@
     "grunt": "^0.4.5"
   },
   "author": "Armin Wagner",
-  "license": ""
+  "license": "MIT"
 }

@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'bower_components/webcomponentsjs/',
             src: 'webcomponents.min.js',
-            dest: 'app/3rd-party/'
+            dest: 'app/js/3rd-party/webcomponents/'
           }
         ]
       }
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           port: 9000,
-          base: 'app',
+          base: '',
           // inject js into the served html-page so the livereload featues
           // of grunt-contrib-watch can be used (without any extra browser plugin)
           livereload: true 
