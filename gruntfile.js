@@ -25,21 +25,31 @@ module.exports = function (grunt) {
           base: '',
           // inject js into the served html-page so the livereload featues
           // of grunt-contrib-watch can be used (without any extra browser plugin)
-          livereload: true 
-        } 
+          livereload: true
+        }
       }
     },
     // grunt-contrib-jshint
     // do some linting.
     jshint: {
-      files: ['app/js/**/*.js','!app/js/3rd-party/**'],
+      files: ['app/js/**/*.js', '!app/js/3rd-party/**'],
       options: {
         globalstrict: true,
         browser: true,
         devel: true, // for console.log
         globals: {
           // the other globals are defined in the .js files
-        } 
+        }
+      }
+    },
+    vulcanize: {
+      files: {
+         src: 'app/index.html',
+         dest: 'app/vulcanized-app.html'
+      },
+      options: {
+        stripComments: true,
+        stripCss: true
       }
     },
     // grunt-contrib-watch
@@ -82,6 +92,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-vulcanize');
   grunt.registerTask('serve', ['default', 'copy', 'connect', 'watch']);
-  grunt.registerTask('default', ['copy','jshint']);
+  grunt.registerTask('default', ['copy', 'jshint']);
 };
