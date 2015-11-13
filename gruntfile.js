@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'bower_components/webcomponentsjs/',
             src: 'webcomponents.min.js',
-            dest: 'app/js/3rd-party/webcomponents/'
+            dest: 'app/js/3rd-party/'
           }
         ]
       }
@@ -44,8 +44,8 @@ module.exports = function (grunt) {
     },
     vulcanize: {
       files: {
-         src: 'app/index.html',
-         dest: 'app/vulcanized-app.html'
+         src: 'bower_components/google-map/google-map.html',
+         dest: 'app/js/3rd-party/vulcanized-google-map.html'
       },
       options: {
         stripComments: true,
@@ -94,5 +94,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-vulcanize');
   grunt.registerTask('serve', ['default', 'copy', 'connect', 'watch']);
-  grunt.registerTask('default', ['copy', 'jshint']);
+  grunt.registerTask('default', ['copy', 'jshint','vulcanize']);
 };
