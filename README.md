@@ -1,5 +1,5 @@
 #Tangible GMaps Polymer
-Tangible GMaps Polymer is a stylized Polymer Google Map.
+Tangible GMaps Polymer is a stylized Google Map based on Polymer.
 This is work in progress.
 
 ##Background
@@ -9,4 +9,4 @@ The prototypes are <a href="http://www.arminbwagner.com/audiokarte/info.html">st
 
 ![Alt text](/tangible_maps.jpg?raw=true "tangible maps")
 
-To test the possibilities of today, I took the shopworn code of the old prototype, combined it with Google's Polymer (version 1.0) and put it on Github. Let's see what happens.
+To test the possibilities of today, I took the shopworn code of the old prototype and combined it with Google's Polymer. Let's see what happens.
